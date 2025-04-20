@@ -1,12 +1,6 @@
 import Image, { ImageProps } from "next/image";
 
-export function ProductCardImage({
-  src,
-  alt,
-  width,
-  height,
-  ...rest
-}: ImageProps) {
+export function ProductCardImage({ src, alt, ...rest }: ImageProps) {
   const hasImage = typeof src === "string" && src.length > 0;
 
   return (
