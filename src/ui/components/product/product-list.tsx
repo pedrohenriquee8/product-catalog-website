@@ -18,7 +18,7 @@ export async function ProductList(props: ProductPageProps) {
   }
 
   return (
-    <section className="flex flex-wrap gap-8 items-center justify-start w-full max-w-5xl">
+    <section className="flex flex-wrap gap-8 items-center justify-center w-full max-w-80 md:max-w-2xl lg:max-w-5xl">
       {products.map((product: Product) => {
         const { id, name, image, price } = product;
 
