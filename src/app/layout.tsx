@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ProDrive Motors",
+  title:
+    "Living Space Studio - Discover our curated selection of furniture pieces",
   description:
-    "ProDrive Motors is a car dealership that specializes in high-performance vehicles, offering a curated selection of luxury and sports cars for enthusiasts and collectors.",
+    "Discover our curated selection of furniture pieces crafted to make any space feel like home. From chairs and sofas to lamps and tables, find the perfect pieces to complete your living space.",
 };
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-dmSans",
 });
 
 export default function RootLayout({
@@ -20,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${dmSans.className} antialiased`}>{children}</body>
     </html>
   );
 }
