@@ -6,12 +6,11 @@ export async function ProductList(props: ProductPageProps) {
   const { category } = props;
   const categoryParams = category ? `?category=${category}` : "";
 
-  const data = await fetch(
-    `http://localhost:3000/api/products${categoryParams}`,
-    {
-      cache: "force-cache",
-    }
-  );
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
+  const data = await fetch(`${baseUrl}/api/products${categoryParams}`, {
+    cache: "force-cache",
+  });
   const products = await data.json();
 
   if (!products || products.length === 0) {
